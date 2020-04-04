@@ -1,0 +1,14 @@
+.endPage{
+    text-align: center;
+}
+.end-pic{
+    background: url(../img/tattooHands.jpg) 50%;
+    height: 30em;
+    background-size: cover;
+}
+.findButton{
+    border-radius: 5px;
+    border: 1px black solid;
+    padding: 1em;
+    margin: 1em;
+}

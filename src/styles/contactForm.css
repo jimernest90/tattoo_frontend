@@ -1,0 +1,50 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25em;
+}
+.fields {
+    border-radius: 5px;
+    height: 3em;
+    width: 12em;
+    border: 1px solid lightgray;
+}
+.textarea{
+    border-radius: 5px;
+    height: 10em;
+    width: 20em;
+    border: 1px solid lightgray;
+}
+
+.form-email{
+    padding-top: 1em;
+}
+.guest{
+    border-radius: 5px;
+    border: 1px black solid;
+    padding: 1em;
+    margin: 1em;
+}
+.login{
+    border-radius: 5px;
+    border: 1px black solid;
+    padding: 1em;
+    margin: 1em;
+}
+.buttons{
+    display: flex;
+}
+.form-mobile{
+    display: none;
+}
+@media(max-width: 420px){
+    .form{
+        display: none;
+    }
+    .form-mobile{
+        margin: auto;
+        display: flex;
+    }
+
+}

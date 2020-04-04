@@ -1,0 +1,163 @@
+.top-artists{
+    margin: 1em;
+}
+.matches{
+    width: 8em;
+    margin-left: 1em;
+    padding-top: .75em;
+}
+.content{
+    margin-bottom: 2em;
+}
+.artist{
+    border-radius: 50%;
+    height: 6em;
+    width: 6em;
+    text-decoration: underline;
+    margin: 1em;  
+}
+.artist-container{
+    box-shadow:0 0 120px 1px #fff, #1d4579 10px 5px 5px;
+    border-radius: 5px;
+    margin-left: 5em;
+    height: 26em;
+}
+.portfolio-image{
+    margin: 1em;
+    height: 5em;
+    border-radius: 5px;
+}
+.column-name{
+    background-color: rgba(0,0,0,0.25);
+    right: 0;
+    border-radius: 5px 5px 0 0;
+}
+.column-map{
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 10em;
+}
+.column-name{
+    border: 2px solid ;
+    padding: 1em;
+}
+.column-map{
+    display: block;
+    border-radius: 5px;
+    padding: 0
+}
+.artist-traits{
+    padding: 1em;
+}
+.artist-prof{
+    width: 28em;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.learn-more{
+    font-weight: bold;
+    padding-left: 30em;
+    cursor: pointer;
+}
+.artists-expertise{
+    width: 6em;
+    height: 1.5em;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: #1d4579 10px 5px 5px;
+    margin-left: 2em;   
+}
+.artists-expertise-title{
+    padding-left: 1em;
+}
+.artist-expertise-container{
+    display: flex;
+}
+.instagramPic{
+    width: 3em;
+    height: 3em;
+}
+.artists-bio-section{
+    display: flex;
+    width: 30em;
+    padding: 1em;
+}
+.artists-bio{
+    margin-left: 2em;
+}
+.sorting{
+    display: flex;
+}
+.sort{
+    background: none;
+    margin-left: 20em;
+}
+.column-mobile{
+    display: none;
+}
+@media(max-width: 420px){
+    html body{
+        overflow-x: hidden;
+    }
+   .artists-page{
+       width: 100vw;
+       overflow-x: hidden;
+   }
+   .header{
+       width: 95vw;
+   }
+    .header-image{
+        padding: 0;
+        margin-left: 8em;
+    }
+    .column-desktop{
+        display: none;
+    }
+    .column-mobile{
+        display: block;
+        margin: 0;
+    }
+    .matches{
+        background: none;
+        width: 10em;
+        margin: 0;
+        
+    }
+    .artist-container{
+        box-shadow:0 0 120px 1px #fff, #1d4579 10px 5px 5px;
+        border-radius: 5px;
+        width: 90vw;
+        height: 26em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .artists-expertise{
+        width: 5.5em;
+        height: 1.5em;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: #1d4579 10px 5px 5px;
+        margin: .2em 
+    }
+    .artists-bio-section{
+        display: flex;
+        width: 25em;
+        padding: 1em;
+    }
+    .learn-more{
+        margin: 1em;
+        padding-left: 18em;
+    }
+    .column-map{
+        display: none;
+    }
+    .sorting{
+        width: 29em;
+        margin-left: 3em;
+    }
+    .artist-prof{
+        width: 30em;
+    }
+  
+}

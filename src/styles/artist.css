@@ -1,0 +1,198 @@
+b{
+    margin-right: 1em;
+}
+.portfolio-img{
+    width: 20em;
+    height: 18em;
+    margin: 1em;
+}
+.portfolio-img img{
+    border-radius: 5px;
+}
+.artist-background{
+    background: url(../img/tattooArtist.jpg) fixed;
+    background-size: cover;
+    border-radius: 5px;
+    height: 15em;
+}
+.artist-expertise{
+    width: 8em;
+    height: 1.5em;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 120px 8px #fff,#1d4579 10px 5px 5px;
+    
+}
+.expertise-container{
+    display: flex;
+    width: 30em
+}
+.reach-out{
+    padding: .75em;
+    width: 8em;
+    position: absolute;
+    right: 0;
+    box-shadow: #1d4579 10px 5px 5px;
+    margin-right: 2em;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.reach-out-bottom{
+    padding: .75em;
+    width: 8em;
+    position: absolute;
+    right: 0;
+    box-shadow: #1d4579 10px 5px 5px;
+    margin-right: 2em;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.artist-profile-header{
+    margin-left: 17em;
+    
+}
+.artist-bio{
+    width: 25em;
+}
+.artist.img{
+   margin-left: 45%;
+   box-shadow: #1d4579 3px 5px 5px;
+   
+}
+.artist-shops{
+    width: 20em;
+}
+.artist-name-container{
+    margin-left: 8em;
+    margin-right: 15em;
+}
+.profilePic{
+    width: 2em;
+}
+.map{
+    margin-left: 4em;
+}
+.portfolio-title{
+    display: block;
+    margin-left: 7.5em;
+}
+.portfolio-title-mobile{
+    display: none;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7.5em;
+}
+.bottom-artist{
+    margin-top: 5em;
+}
+.artist-bio-mobile{
+    display: none;
+}
+.artist-name-mobile{
+    display: none;
+}
+.artist-expertise-mobile{
+    display: none;
+}
+.specialties-mobile{
+    display: none;
+}
+.artist-shops-mobile{
+    display: none;
+}
+@media(max-width: 420px){
+   
+    .artist-profile-header{
+       padding: 0;
+       margin-left: 4.5em;
+       margin-top: 2em;
+    }
+   .artist-background{
+        background: url(../img/tattooArtist.jpg);
+        background-size: cover;
+       margin-top: 1em;
+       width: 100vw
+   }
+   .artist-profile{
+       display: flex;
+       flex-direction: column;
+   }
+   h4 .artist-expertise{
+     display: none;
+   }
+   .artist-name-container{
+       display: none;
+   }
+   .artist-bio{
+       display: none;
+   }
+   .artist-name{
+       display: none;
+   }
+   .artist-expertise{
+       display: none;
+   }
+   .specialties{
+       display: none;
+   }
+   .artist-shops{
+       display: none;
+   }
+   .map{
+       display: none;
+   }
+   .reviews{
+       width: 27em;
+       margin: 0;
+   }
+   .artist-name-mobile{
+       display: flex;
+        width: 27em;
+   }
+   .artist-bio-mobile{
+       display: flex;
+         width: 27em;
+   }
+   .expertise-container-mobile{
+        display: flex;
+        width: 27em;
+        margin: 0
+    }
+    .artist-expertise-mobile{
+        width: 8em;
+        margin: .5em;
+        height: 1.5em;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 0 120px 10px #fff,#1d4579 10px 5px 5px; 
+    }
+    .artist-bio-mobile{
+        display: block;
+    }
+    .artist-name-mobile{
+        display: block;
+    }
+    .artist-expertise-mobile{
+        display: block;
+    }
+    .specialties-mobile{
+        display: block;
+    }
+    .artist-shops-mobile{
+        display: block;
+    }
+    .portfolio-title{
+        display: none;
+    }
+    .portfolio-title-mobile{
+        display: block;
+        margin-left: 10em;
+    }
+
+}
+
+

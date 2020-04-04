@@ -1,0 +1,99 @@
+
+.home-pic{
+    background: url(../img/tattooHands.jpg)100% fixed;
+    background-size: 100%;
+    height: 50em;
+}
+.option-question{
+    text-align: center
+}
+.option-refine{
+    margin-left: 29.5em;
+}
+.transparency{
+    width: 100%;
+    background-color: rgba(0,0,0,0.7); 
+}
+.transparency h1{
+    text-align: right;
+    color: white;
+    padding-top: 10em;
+    font-size: 3rem;
+}
+.transparency p{
+    text-align: right;
+    color: white;
+    font-size: 1.5em;
+}
+.column-location{
+    margin-left: 38em;
+    padding: 1em;
+}
+.column-gender{
+    margin-left: 38em;
+    padding: 1em;
+}
+.browse-button{
+    padding: .75em;
+    width: 10em;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 0 120px 1px #fff,rgb(196,199,177) 10px 5px 5px;
+    margin-right: 2em;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient(127deg, white, rgb(230,218,180));
+    margin: 1em
+}
+.optional{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 47em;
+}
+.option{
+    border-radius: 5px;
+    box-shadow: 0 0 120px 1px #fff,#1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #c3d1e4, #dde7f3, #d4e0ed);
+    padding: .1em;
+    width: 10em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between; 
+}
+.optionSelected{
+    border-radius: 5px;
+    box-shadow: #1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #1d4579, #154a89, #226db8);
+    padding: .1em;
+    width: 10em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;  
+}
+.info-pic{
+    width: 2em;
+}
+
+@media(max-width: 420px){
+    .column-gender{
+        margin: 0;
+        display: flex;
+    }
+    .column-location{
+        margin: 0;
+    }
+    .optional{
+        width: 30em;
+        overflow: hidden
+    }
+    .home-pic{
+        width: 105vw;
+    }
+    .option-refine{
+        margin-left: 3.5em;
+    }
+}
