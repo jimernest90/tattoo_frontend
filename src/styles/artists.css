@@ -50,7 +50,7 @@
     padding: 1em;
 }
 .artist-prof{
-    width: 35em;
+    width: 38em;
     display: flex;
     flex-wrap: wrap;
     
@@ -62,12 +62,17 @@
     cursor: pointer;
 }
 .artists-expertise{
-    width: 6em;
-    height: 1.5em;
-    text-align: center;
     border-radius: 5px;
-    box-shadow: #1d4579 10px 5px 5px;
-    margin-left: 2em;   
+    box-shadow: 0 0 120px 1px #fff,#1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #c3d1e4, #dde7f3, #d4e0ed);
+    /* width: 8em; */
+    height: 1.5em;
+    margin: .25em;
+    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    
 }
 .artists-expertise-title{
     padding-left: 1em;
@@ -129,12 +134,12 @@
         box-shadow:0 0 120px 1px #fff, #1d4579 10px 5px 5px;
         border-radius: 5px;
         width: 90vw;
-        height: 26em;
+        height: 28em;
         margin-left: 1em;
         margin-right: 1em;
     }
     .artists-expertise{
-        width: 5.5em;
+        /* width: 5.5em; */
         height: 1.5em;
         text-align: center;
         border-radius: 5px;
@@ -148,7 +153,8 @@
     }
     .learn-more{
         margin: 1em;
-        padding-left: 18em;
+        padding-left: 20em;
+        width: 6em;
     }
     .column-map{
         display: none;
