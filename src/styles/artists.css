@@ -50,14 +50,15 @@
     padding: 1em;
 }
 .artist-prof{
-    width: 28em;
+    width: 35em;
     display: flex;
     flex-wrap: wrap;
     
 }
 .learn-more{
+    width: 6em;
     font-weight: bold;
-    padding-left: 30em;
+    margin-left: 26em;
     cursor: pointer;
 }
 .artists-expertise{

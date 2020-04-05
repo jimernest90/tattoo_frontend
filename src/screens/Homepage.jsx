@@ -6,6 +6,7 @@ import GenderPreference from '../shared/GenderPreference'
 import Header from '../shared/Header'
 import infoPic from '../img/info-icon.png'
 import '../styles/homePage.css'
+import magnifyPic from'../img/magnify.png'
 
 class Homepage extends React.Component{
     constructor(props){
@@ -33,7 +34,7 @@ class Homepage extends React.Component{
             id: 2
         },
         {
-            name: 'Black and White',
+            name: 'Black & White',
             id: 3
         },
         {
@@ -61,7 +62,7 @@ class Homepage extends React.Component{
             id: 9
         },
         {
-            name: 'Stick and Poke',
+            name: 'Stick & Poke',
             id: 10
         },
         {
@@ -109,7 +110,7 @@ class Homepage extends React.Component{
                     )
                 })}   
                </div>
-               <NavLink to='/artists'><button className='browse-button' type='submit'>Browse results &#x1F50D;</button></NavLink>
+               <NavLink to='/artists'><button className='browse-button' type='submit'>Browse results<img src={magnifyPic} className='magnify' alt='magnify'/></button></NavLink>
         </div>
         )
     }

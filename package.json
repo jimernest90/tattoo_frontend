@@ -24,6 +24,7 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
+    "heroku-postbuild": "npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
