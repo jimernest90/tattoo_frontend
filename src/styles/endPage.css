@@ -8,7 +8,15 @@
 }
 .findButton{
     border-radius: 5px;
-    border: 1px black solid;
+    box-shadow: 0 0 120px 1px #fff,#1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #c3d1e4, #dde7f3, #d4e0ed);
+    width: 8em;
+    height: 1.5em;
+    margin: .25em;
+    margin-top: 1em;
     padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
     margin: 1em;
 }
