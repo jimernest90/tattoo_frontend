@@ -22,15 +22,27 @@ form{
 }
 .guest{
     border-radius: 5px;
-    border: 1px black solid;
+    box-shadow: 0 0 120px 1px #fff,#1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #c3d1e4, #dde7f3, #d4e0ed);
+    /* width: 8em; */
+    height: 1.5em;
+    margin: .25em;
     padding: 1em;
-    margin: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
 }
 .login{
     border-radius: 5px;
-    border: 1px black solid;
+    box-shadow: 0 0 120px 1px #fff,#1d4579 2px 5px 5px;
+    background: linear-gradient(to left bottom, #c3d1e4, #dde7f3, #d4e0ed);
+    /* width: 8em; */
+    height: 1.5em;
+    margin: .25em;
     padding: 1em;
-    margin: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
 }
 .buttons{
     display: flex;
@@ -45,6 +57,9 @@ form{
     .form-mobile{
         margin: auto;
         display: flex;
+    }
+    .login{
+        margin-left: 4em;
     }
 
 }
