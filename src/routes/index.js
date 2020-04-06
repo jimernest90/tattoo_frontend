@@ -12,8 +12,8 @@ const Routes = (props) => {
             <Route exact path='/thankyou' component={Endpage}/>
             <Route exact path='/' component={Homepage}/>
             <Route exact path='/artists' component={Artists}/>
-            <Route exact path='/artists/:id' component={Artist}
-            render={<Artist {...props}/>}
+            <Route exact path={'/artists/:id'} component={Artist}
+            render={props => <Artist {...props}/>}
             />
             <Route exact path='/contact_form' component={ContactForm}/>
         </Switch>
