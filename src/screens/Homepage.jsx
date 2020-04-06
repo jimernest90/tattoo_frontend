@@ -102,11 +102,11 @@ class Homepage extends React.Component{
                </Grid.Column> 
                <p className='option-refine'>Select style (optional)</p>
                <div className='optional'>  
-                {options.map((option) => {
+                {options.map((option,index) => {
                     let option_style = !this.state.selected && this.state.divId === option.id? 'optionSelected': 'option'
                     return(
                         
-                        <div className={option_style} onClick={() => this.changeColor(option.id)}>{option.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                        <div className={option_style} onClick={() => this.changeColor(option.id)} key={index}>{option.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
                     )
                 })}   
                </div>
