@@ -78,14 +78,14 @@ class Artists extends React.Component {
         }
 
     }
-    getArtistById = async id => {
-        try {
-          const res = await Api.get(`/artists/${id}`);
-          return res.data;
-        } catch (e) {
-          throw e;
-        }
-      };
+    // getArtistById = async id => {
+    //     try {
+    //       const res = await Api.get(`/artists/${id}`);
+    //       return res.data;
+    //     } catch (e) {
+    //       throw e;
+    //     }
+    //   };
 
     openArtist = (id) => {
         console.log('clicked')
