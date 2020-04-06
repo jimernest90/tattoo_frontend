@@ -7,8 +7,13 @@ import { Header, Grid, Dropdown } from 'semantic-ui-react'
 import HeaderArtists from '../shared/Header'
 import instagramPic from '../img/instagramPic.png'
 
-
-
+const YOUR_HEROKU_URL = "https://tattoo-backend.herokuapp.com/"
+const Api = Axios.create({
+    baseURL: YOUR_HEROKU_URL,
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
 class Artists extends React.Component {
     constructor(props) {
         super(props)
@@ -21,15 +26,21 @@ class Artists extends React.Component {
         this.getArtists()
     }
     async getArtists() {
-        const response = await Axios('/artists')
+        try{
+        const response = await Api.get('/artists')
         console.log('response', response)
         const data = response.data
         this.setState({
             artists: data
         })
+    }catch(error){
+        console.log(error.response)
     }
+}
+
+
     async sortArtistsbyRating() {
-        const ratingResponse = await Axios('/artists?ratings=sorted')
+        const ratingResponse = await Api.get('/artists?ratings=sorted')
         console.log('ratingResponse', ratingResponse)
         const ratingData = ratingResponse.data
         this.setState({
@@ -38,7 +49,7 @@ class Artists extends React.Component {
 
     }
     async sortArtistsbyDistance() {
-        const distanceResponse = await Axios('/artists?distance=sorted')
+        const distanceResponse = await Api.get('/artists?distance=sorted')
         console.log('ratingResponse', distanceResponse)
         const distanceData = distanceResponse.data
         this.setState({
