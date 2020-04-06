@@ -81,22 +81,19 @@ class Artists extends React.Component {
     getArtistById = async id => {
         try {
           const res = await Api.get(`/artists/${id}`);
-          this.setState({
-            clicked: true,
-            redirectID: id
-        })
+          return res.data;
         } catch (e) {
           throw e;
         }
       };
 
-    // openArtist = (id) => {
-    //     console.log('clicked')
-    //     this.setState({
-    //         clicked: true,
-    //         redirectID: id
-    //     })
-    // }
+    openArtist = (id) => {
+        console.log('clicked')
+        this.setState({
+            clicked: true,
+            redirectID: id
+        })
+    }
 
     renderArtists(props) {
         let artists = this.state.clicked && <Redirect to={`/artists/${this.state.redirectID}`} />
@@ -126,7 +123,7 @@ class Artists extends React.Component {
                                         <h4 className='artists-expertise' >style 3</h4>
                                     </Grid.Row>
                                 </Grid.Row>
-                                <p className='learn-more' onClick={() => this.getArtistById(artist.id)}><u>Learn More</u></p>
+                                <p className='learn-more' onClick={() => this.openArtist(artist.id)}><u>Learn More</u></p>
                             </div>
                             {artists}
                         </Grid.Column>
