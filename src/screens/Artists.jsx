@@ -7,13 +7,25 @@ import { Header, Grid, Dropdown } from 'semantic-ui-react'
 import HeaderArtists from '../shared/Header'
 import instagramPic from '../img/instagramPic.png'
 
-const YOUR_HEROKU_URL = "https://tattoo-backend.herokuapp.com/"
+let apiUrl;
+
+const apiUrls = {
+  production: "https://tattoo-backend.herokuapp.com/",
+  development: "http://localhost:3000"
+};
+
+if (window.location.hostname === "localhost") {
+  apiUrl = apiUrls.development;
+} else {
+  apiUrl = apiUrls.production;
+}
+
 const Api = Axios.create({
-    baseURL: YOUR_HEROKU_URL,
-    headers: {
-        "Access-Control-Allow-Origin": "*"
-      }
-    })
+  baseURL: apiUrl,
+  headers: {
+    "Access-Control-Allow-Origin": "*"
+  }
+});
 class Artists extends React.Component {
     constructor(props) {
         super(props)
