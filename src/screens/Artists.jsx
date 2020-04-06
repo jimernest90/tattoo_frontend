@@ -10,21 +10,21 @@ import instagramPic from '../img/instagramPic.png'
 let apiUrl;
 
 const apiUrls = {
-  production: "https://tattoo-backend.herokuapp.com/",
-  development: "http://localhost:3000"
+    production: "https://tattoo-backend.herokuapp.com",
+    development: "http://localhost:3000"
 };
 
 if (window.location.hostname === "localhost") {
-  apiUrl = apiUrls.development;
+    apiUrl = apiUrls.development;
 } else {
-  apiUrl = apiUrls.production;
+    apiUrl = apiUrls.production;
 }
 
 const Api = Axios.create({
-  baseURL: apiUrl,
-  headers: {
-    "Access-Control-Allow-Origin": "*"
-  }
+    baseURL: apiUrl,
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    }
 });
 class Artists extends React.Component {
     constructor(props) {
@@ -38,35 +38,43 @@ class Artists extends React.Component {
         this.getArtists()
     }
     async getArtists() {
-        try{
-        const response = await Api.get('/artists')
-        console.log('response', response)
-        const data = response.data
-        this.setState({
-            artists: data
-        })
-    }catch(error){
-        console.log(error.response)
+        try {
+            const response = await Api.get('/artists')
+            console.log('response', response)
+            const data = response.data
+            this.setState({
+                artists: data
+            })
+        } catch (error) {
+            throw(error.response)
+        }
     }
-}
 
 
     async sortArtistsbyRating() {
-        const ratingResponse = await Api.get('/artists?ratings=sorted')
-        console.log('ratingResponse', ratingResponse)
-        const ratingData = ratingResponse.data
-        this.setState({
-            artists: ratingData
-        })
+        try {
+            const ratingResponse = await Api.get('/artists?ratings=sorted')
+            console.log('ratingResponse', ratingResponse)
+            const ratingData = ratingResponse.data
+            this.setState({
+                artists: ratingData
+            })
+        } catch (error) {
+            throw(error.response)
+        }
 
     }
     async sortArtistsbyDistance() {
-        const distanceResponse = await Api.get('/artists?distance=sorted')
-        console.log('ratingResponse', distanceResponse)
-        const distanceData = distanceResponse.data
-        this.setState({
-            artists: distanceData
-        })
+        try {
+            const distanceResponse = await Api.get('/artists?distance=sorted')
+            console.log('ratingResponse', distanceResponse)
+            const distanceData = distanceResponse.data
+            this.setState({
+                artists: distanceData
+            })
+        } catch (error) {
+            throw(error.response)
+        }
 
     }
     openArtist = (id) => {
@@ -82,7 +90,7 @@ class Artists extends React.Component {
         return (
             this.state.artists.map((artist, index) => {
                 return (
-                    <Grid>
+                    <Grid key={index}>
                         <Grid.Column width={15} >
                             <div className='artist-container'>
                                 <div className='column-name'>{artist.name}</div>
@@ -95,8 +103,8 @@ class Artists extends React.Component {
                                         <div className='column-price'>Minimum: ${artist.price}</div>
                                     </Grid.Column>
                                     <div className='artists-bio-section'>
-                                    <img src ={instagramPic} alt='instagramPic' className='instagramPic'/>
-                                    <p className='artists-bio'>{artist.bio}</p>
+                                        <img src={instagramPic} alt='instagramPic' className='instagramPic' />
+                                        <p className='artists-bio'>{artist.bio}</p>
                                     </div>
                                     <Grid.Row className='artist-expertise-container'>
                                         <h4 className='artists-expertise-title'>Specialties:</h4>
@@ -118,36 +126,36 @@ class Artists extends React.Component {
     render(props) {
         const options = [
             {
-              key: 'distance',
-              text: 'distance',
-              value: 'distance',
-              content: < div onClick = {() => this.sortArtistsbyDistance()}> distance</div>,
+                key: 'distance',
+                text: 'distance',
+                value: 'distance',
+                content: < div onClick={() => this.sortArtistsbyDistance()}> distance</div>,
             },
             {
-              key: 'rating',
-              text: 'rating',
-              value: 'rating',
-              content: <div onClick = {() => this.sortArtistsbyRating()}> rating </div>,
+                key: 'rating',
+                text: 'rating',
+                value: 'rating',
+                content: <div onClick={() => this.sortArtistsbyRating()}> rating </div>,
             },
-          ]
+        ]
         return (
             <Grid className='artists-page' padded='horizontally'>
                 <Grid.Row >
                     <div className='artists'>
                         <NavLink exact to='/'><HeaderArtists /></NavLink>
                         <div className='sorting'>
-                        <h2 className='matches'>{`${this.state.artists.length} matches`}</h2>
-                        <Header className='sort' as='h4'>
-                            <Header.Content>
-                                sort by{' '}
-                                <Dropdown
-                                    inline
-                                    header=''
-                                    options={options}
-                                    defaultValue={options[0].value}
-                                />
-                            </Header.Content>
-                        </Header>
+                            <h2 className='matches'>{`${this.state.artists.length} matches`}</h2>
+                            <Header className='sort' as='h4'>
+                                <Header.Content>
+                                    sort by{' '}
+                                    <Dropdown
+                                        inline
+                                        header=''
+                                        options={options}
+                                        defaultValue={options[0].value}
+                                    />
+                                </Header.Content>
+                            </Header>
                         </div>
                         <div className='column-desktop' style={{ overflow: 'scroll', overflowX: 'hidden', maxHeight: 570 }}>{this.renderArtists()}</div>
                         <div className='column-mobile'>{this.renderArtists()}</div>
