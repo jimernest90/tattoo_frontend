@@ -78,23 +78,18 @@ class Artists extends React.Component {
         }
 
     }
+    
 
-    openArtist = async (id) => {
-        await fetch(`/artists/${id}`)
-            .then((res) => {
-                return res.json()
-            })
-            .then((json) => {
-            this.setState({
-            redirect: true,
-            artistData: json
+    openArtist = (id) => {
+        console.log('clicked')
+        this.setState({
+            clicked: true,
+            redirectID: id
         })
-    })
     }
 
     renderArtists(props) {
-        let artists = this.state.redirect && <Redirect to={{pathname: `/artists/${this.props.match.params.id}`}}
-     />
+        let artists = this.state.clicked && <Redirect to={`/artists/${this.state.redirectID}`} />
         return (
             this.state.artists.map((artist, index) => {
                 return (
