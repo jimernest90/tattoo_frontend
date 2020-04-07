@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/artists.css'
 import Axios from 'axios'
-import { Route, Redirect, NavLink } from 'react-router-dom'
+import { Redirect, NavLink } from 'react-router-dom'
 import MapArtists from './MapArtists'
 import { Header, Grid, Dropdown } from 'semantic-ui-react'
 import HeaderArtists from '../shared/Header'
@@ -79,16 +79,25 @@ class Artists extends React.Component {
 
     }
 
-    openArtist = (id) => {
-        console.log('clicked')
-        this.setState({
-            clicked: true,
+    openArtist = async (id) => {
+        await fetch(`/artists/${id}`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((json) => {
+            this.setState({
+            redirect: true,
+            artistData: json,
             redirectID: id
         })
+    })
     }
 
     renderArtists(props) {
-        let artists = this.state.clicked && <Route render={() => <Redirect to={`/artists/${this.state.redirectID}`} />} />
+        let artists = this.state.redirect && <Redirect to={{pathname: `/artists/${this.state.redirectID}`,
+        state: this.state.artistData
+    }}
+     />
         return (
             this.state.artists.map((artist, index) => {
                 return (

@@ -4,7 +4,6 @@ import '../styles/artist.css'
 import { Grid, Image } from 'semantic-ui-react'
 import MapArtist from './MapArtist'
 import { NavLink } from 'react-router-dom'
-import backgroundImage from '../img/tattooArtist.jpg'
 import Header from '../shared/Header'
 import profilePic from '../img/profile.png'
 

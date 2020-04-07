@@ -13,7 +13,7 @@ const Routes = (props) => {
             <Route exact path='/' component={Homepage}/>
             <Route exact path='/artists' component={Artists}/>
             <Route exact 
-            path='/artists/:id' component={Artist}
+            path='/artists/:id' 
             render={props => <Artist {...props}/>}
             />
             <Route exact path='/contact_form' component={ContactForm}/>
