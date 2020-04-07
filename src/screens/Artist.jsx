@@ -8,6 +8,26 @@ import Header from '../shared/Header'
 import profilePic from '../img/profile.png'
 
 
+let apiUrl;
+
+const apiUrls = {
+    production: "https://tattoo-backend.herokuapp.com",
+    development: "http://localhost:3000"
+};
+
+if (window.location.hostname === "localhost") {
+    apiUrl = apiUrls.development;
+} else {
+    apiUrl = apiUrls.production;
+}
+
+const Api = Axios.create({
+    baseURL: apiUrl,
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    }
+});
+
 class Artist extends React.Component {
     constructor(props) {
         super(props)
@@ -22,11 +42,15 @@ class Artist extends React.Component {
 
     async fetchArtist() {
         
-        let artist = await Axios.get(`/artists/${this.props.match.params.id}`)
+      try{
+        let artist = await Api.get(`/artists/${this.props.match.params.id}`)
         console.log(artist)
         let resp = artist.data
         console.log(resp)
         this.setState({ artist: resp })
+      } catch (error) {
+        throw(error.response)
+    }
     }
     
    render(){
