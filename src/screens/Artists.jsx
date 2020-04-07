@@ -112,8 +112,8 @@ class Artists extends React.Component {
                                     <Grid.Row className='artist-expertise-container'>
                                         <h4 className='artists-expertise-title'>Specialties:</h4>
                                         <h4 className='artists-expertise' >{artist.style}</h4>
-                                        <h4 className='artists-expertise' >style 2</h4>
-                                        <h4 className='artists-expertise' >style 3</h4>
+                                        <h4 className='artists-expertise' >Traditonal</h4>
+                                        <h4 className='artists-expertise' >Color</h4>
                                     </Grid.Row>
                                 </Grid.Row>
                                 <p className='learn-more' onClick={() => this.openArtist(artist.id)}><u>Learn More</u></p>
