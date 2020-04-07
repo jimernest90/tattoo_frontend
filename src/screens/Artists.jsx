@@ -87,16 +87,13 @@ class Artists extends React.Component {
             .then((json) => {
             this.setState({
             redirect: true,
-            artistData: json,
-            redirectID: id
+            artistData: json
         })
     })
     }
 
     renderArtists(props) {
-        let artists = this.state.redirect && <Redirect to={{pathname: `/artists/${this.state.redirectID}`,
-        state: this.state.artistData
-    }}
+        let artists = this.state.redirect && <Redirect to={{pathname: `/artists/${this.props.match.params.id}`}}
      />
         return (
             this.state.artists.map((artist, index) => {
