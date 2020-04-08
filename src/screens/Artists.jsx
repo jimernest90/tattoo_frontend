@@ -7,6 +7,26 @@ import { Header, Grid, Dropdown } from 'semantic-ui-react'
 import HeaderArtists from '../shared/Header'
 import instagramPic from '../img/instagramPic.png'
 
+let image = ["https://images.unsplash.com/photo-1475695752828-6d2b0a83cf8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1562962230-16e4623d36e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1541121514895-0f36e7d38d14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1540174053853-1cc5d1fa8814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1522687533888-1078974f88ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1529201763263-dbf358bc90d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1482328177731-274399da39f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1570106786245-ce68ce6503f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]
+const imageFunction = () => {
+    let guesser = Math.floor(Math.random(image.length) * 10)
+
+    if (guesser <= 0) {
+        return image[0]
+    } else if (guesser === 1) {
+        return image[1]
+    } else if (guesser === 2) {
+        return image[2]
+    } else if (guesser === 3) {
+        return image[3]
+    } else if (guesser === 4) {
+        return image[4]
+    } else {
+        return image[5]
+    }
+
+}
+
 let apiUrl;
 
 const apiUrls = {
@@ -46,10 +66,10 @@ class Artists extends React.Component {
                 artists: data
             })
         } catch (error) {
-            throw(error.response)
+            throw (error.response)
         }
     }
-    
+
 
 
     async sortArtistsbyRating() {
@@ -61,7 +81,7 @@ class Artists extends React.Component {
                 artists: ratingData
             })
         } catch (error) {
-            throw(error.response)
+            throw (error.response)
         }
 
     }
@@ -74,11 +94,11 @@ class Artists extends React.Component {
                 artists: distanceData
             })
         } catch (error) {
-            throw(error.response)
+            throw (error.response)
         }
 
     }
-    
+
 
     openArtist = (id) => {
         console.log('clicked')
@@ -99,7 +119,7 @@ class Artists extends React.Component {
                                 <div className='column-name'>{artist.name}</div>
                                 <Grid.Row className='artist-prof'>
                                     <img src={artist.img} className='artist' />
-                                    <img className='portfolio-image' src={artist.portfolios[0].imgone} />
+                                    <img className='portfolio-image' src={imageFunction()} />
                                     <Grid.Column className='artist-traits'>
                                         <div className='column-rating'>&#x2605;Rating: {artist.ratingstwo}/5</div>
                                         <div className='column-distance'>{artist.distancetwo} miles away</div>

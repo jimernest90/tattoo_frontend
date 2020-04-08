@@ -139,12 +139,12 @@
         margin-right: 1em;
     }
     .artists-expertise{
-        /* width: 5.5em; */
         height: 1.5em;
         text-align: center;
         border-radius: 5px;
         box-shadow: #1d4579 10px 5px 5px;
-        margin: .2em 
+        margin: .2em;
+        font-size: .9em;
     }
     .artists-bio-section{
         display: flex;

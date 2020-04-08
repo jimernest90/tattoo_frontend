@@ -101,6 +101,7 @@
     }
     .column-location{
         margin: 0;
+        display: flex;
     }
     .optional{
         width: 30em;
@@ -111,5 +112,8 @@
     }
     .option-refine{
         margin-left: 3.5em;
+    }
+    .browse-button{
+        margin-right: 9em;
     }
 }
