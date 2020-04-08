@@ -94,7 +94,7 @@ class Homepage extends React.Component{
         return(
         <div className='home-page'>  
             <Header/>
-        <Grid width={10} padded='vertically' className='home-pic'><div className='transparency'><h1>Find the Tattooist For You</h1><p>We'll help you find a tattoo artist that meets your needs.</p></div></Grid>
+        <div className='home-pic'><div className='transparency'><h1>Find the Tattooist For You</h1><p>We'll help you find a tattoo artist that meets your needs.</p></div></div>
                <Grid.Column>
                <div className='column-location'>Lets Start with a Location: <LocationDropDown/></div> 
                <p className='option-question'><b>These optional questions will refine your search</b></p>  

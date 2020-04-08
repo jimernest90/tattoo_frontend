@@ -12,6 +12,7 @@
 }
 .transparency{
     width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,0.7); 
 }
 .transparency h1{
@@ -108,7 +109,10 @@
         overflow: hidden
     }
     .home-pic{
-        width: 105vw;
+        height: 30em;
+    }
+    .transparency h1{
+        padding-top: 5em;
     }
     .option-refine{
         margin-left: 3.5em;
