@@ -77,7 +77,7 @@ class Artist extends React.Component {
                     <h4 className='specialties'><b>Specialties:</b></h4>
                     <h4 className='artist-expertise' >{artist.style}</h4>
                     <h4 className='artist-expertise' >Traditional</h4>
-                    <h4 className='artist-expertise' >BlackWork</h4> 
+                    <h4 className='artist-expertise' >Color</h4> 
                   </Grid.Row>
                     <h4 className='artist-shops'><b>Shops:</b> <u>My Shop</u></h4>
                 </Grid.Column>
