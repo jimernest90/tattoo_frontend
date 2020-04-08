@@ -183,10 +183,10 @@ class Homepage extends React.Component{
                <p className='option-refine'>Tattooist Specialties (optional)</p>
                <div className='optional'>
                {moreOptions.map((moreOption,index) => {
-                    let moreOptions_style = !this.state.selected && this.state.divIdFour === moreOptions.id? 'optionSelected': 'option'
+                    let moreOptions_style = !this.state.selected && this.state.divIdMore === moreOption.id? 'optionSelected': 'option'
                     return(
                         
-                        <div className={moreOptions_style} onClick={() => this.changeColorMore(moreOptions.id)} key={index}>{moreOption.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                        <div className={moreOptions_style} onClick={() => this.changeColorMore(moreOption.id)} key={index}>{moreOption.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
                     )
                 })} 
                </div>
