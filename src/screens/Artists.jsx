@@ -140,7 +140,6 @@ class Artists extends React.Component {
                             </div>
                             {artists}
                         </Grid.Column>
-
                     </Grid>
                 )
             })

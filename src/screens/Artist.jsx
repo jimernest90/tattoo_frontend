@@ -96,14 +96,14 @@ class Artist extends React.Component {
                 </Grid.Column>
                 <h3 className='portfolio-title-mobile'>Portfolio:</h3>
                 <Grid className='portfolio'  centered width={2}>
-                <img className='portfolio-img' src={artist.portfolios[0].imgone}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgtwo}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgthree}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgfour}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgfive}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgsix}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgseven}/>
-                <img className='portfolio-img' src={artist.portfolios[0].imgeight}/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1475695752828-6d2b0a83cf8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1541121514895-0f36e7d38d14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1540174053853-1cc5d1fa8814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1522687533888-1078974f88ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1529201763263-dbf358bc90d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1482328177731-274399da39f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img className='portfolio-img' src="https://images.unsplash.com/photo-1570106786245-ce68ce6503f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
                 </Grid>
                 <Grid.Column width={15}> 
                 <div className='reviews'>
