@@ -16,7 +16,7 @@ b{
     height: 15em;
 }
 .artist-expertise{
-    width: 8em;
+    display: flex;
     height: 1.5em;
     margin: 1em;
     padding: 1em;
@@ -28,7 +28,7 @@ b{
 }
 .expertise-container{
     display: flex;
-    width: 30em
+    width: 40em
 }
 .reach-out{
     padding: .75em;
