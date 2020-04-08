@@ -160,7 +160,7 @@ class Homepage extends React.Component {
                     <p className='option-question'><b>These optional questions will refine your search</b></p>
                     <div className='column-gender'>Preferred gender of tattooist: <GenderPreference /></div>
                 </Grid.Column>
-                <p className='option-refine'>Select up to four styles (optional)</p>
+                <p className='option-refine'>Select up to three styles (optional)</p>
                 <div className='optional'>
                     {options.map((option, index) => {
                         let option_style = !this.state.selected && this.state.divId === option.id || this.state.name === option.name || this.state.style === option.style ? 'optionSelected' : 'option'
