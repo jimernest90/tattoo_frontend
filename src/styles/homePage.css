@@ -72,6 +72,7 @@
     padding-bottom: 2em;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
     
 }
 .optionSelected{
@@ -86,6 +87,7 @@
     padding-bottom: 2em;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 .info-pic{
     width: 2em;

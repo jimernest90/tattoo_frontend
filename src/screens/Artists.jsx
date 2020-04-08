@@ -78,7 +78,8 @@ class Artists extends React.Component {
             console.log('ratingResponse', ratingResponse)
             const ratingData = ratingResponse.data
             this.setState({
-                artists: ratingData
+                artists: ratingData,
+               
             })
         } catch (error) {
             throw (error.response)
@@ -91,7 +92,8 @@ class Artists extends React.Component {
             console.log('ratingResponse', distanceResponse)
             const distanceData = distanceResponse.data
             this.setState({
-                artists: distanceData
+                artists: distanceData,
+                
             })
         } catch (error) {
             throw (error.response)
