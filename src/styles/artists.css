@@ -148,13 +148,14 @@
     }
     .artists-bio-section{
         display: flex;
-        width: 25em;
+        width: 28em;
         padding: 1em;
     }
     .learn-more{
         margin: 1em;
-        padding-left: 20em;
-        width: 6em;
+        margin-top: 2em;
+        margin-left: 20em;
+        width: 10em;
     }
     .column-map{
         display: none;
