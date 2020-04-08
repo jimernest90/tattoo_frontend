@@ -84,9 +84,11 @@
 .instagramPic{
     width: 3em;
     height: 3em;
+    margin-right: 1em;
+    flex-shrink: 0;
 }
 .artists-bio-section{
-    display: inline-flex;
+    display: flex;
     width: 30em;
     padding: 1em;
 }
