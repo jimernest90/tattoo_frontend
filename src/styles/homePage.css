@@ -55,6 +55,7 @@
 .optional{
     display: flex;
     margin: auto;
+    margin-bottom: 1em;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 60em;

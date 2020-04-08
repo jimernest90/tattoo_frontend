@@ -13,7 +13,11 @@ class Homepage extends React.Component{
         super(props)
         this.state ={
             selected: true,
-            divId: ''
+            divId: '',
+            divIdTwo: '',
+            divIdThree: '',
+            divIdFour: '',
+            divIdMore:''
         }
     }
     
@@ -23,7 +27,30 @@ class Homepage extends React.Component{
             divId: id
         })
     }
-    
+    changeColorTwo(id) {
+        this.setState({
+            selected: false,
+            divIdTwo: id
+        })
+    }
+    changeColorThree(id) {
+        this.setState({
+            selected: false,
+            divIdThree: id
+        })
+    }
+    changeColorFour(id) {
+        this.setState({
+            selected: false,
+            divIdFour: id
+        })
+    }
+    changeColorMore(id) {
+        this.setState({
+            selected: false,
+            divIdMore: id
+        })
+    }
     render(){
         let options = [{
             name: 'Traditional',
@@ -40,57 +67,80 @@ class Homepage extends React.Component{
         {
             name: 'Color',
             id: 4
-        },
-        {
-            name: 'Typographic',
-            id: 5
-        },
-        {
-            name: 'Abstract',
-            id: 6
-        },
-        {
-            name: 'Portraits',
-            id: 7
-        },
-        {
-            name: 'Animals',
-            id: 8
-        },
-        {
-            name: 'Dark-Skinned',
-            id: 9
-        },
-        {
-            name: 'Stick & Poke',
-            id: 10
-        },
-        {
-            name: 'Realistic',
-            id: 11
-        },
-        {
-            name: 'Tribal',
-            id: 12
-        },
-        {
-            name: 'Blackwork',
-            id: 13
-        },
-        {
-            name: 'Illustrative',
-            id: 14
-        },
-        {
-            name: 'Japanese',
-            id: 15
-        },
-        {
-            name: 'Cartoon',
-            id: 16
-        },
+        }
         ]
-        
+        let optionsTwo = [
+            {
+                name: 'Typographic',
+                id: 5
+            },
+            {
+                name: 'Abstract',
+                id: 6
+            },
+            {
+                name: 'Portraits',
+                id: 7
+            },
+            {
+                name: 'Animals',
+                id: 8
+            }
+        ]
+        let optionsThree = [
+            {
+                name: 'Dark-Skinned',
+                id: 9
+            },
+            {
+                name: 'Stick & Poke',
+                id: 10
+            },
+            {
+                name: 'Realistic',
+                id: 11
+            },
+            {
+                name: 'Tribal',
+                id: 12
+            }
+        ]
+        let optionsFour = [
+            {
+                name: 'Blackwork',
+                id: 13
+            },
+            {
+                name: 'Illustrative',
+                id: 14
+            },
+            {
+                name: 'Japanese',
+                id: 15
+            },
+            {
+                name: 'Cartoon',
+                id: 16
+            }
+        ]
+        let moreOptions =[
+            {
+                name: 'Cosmetic',
+                id: 17
+            },
+            {
+                name: 'Cover-ups',
+                id: 18
+            },
+            {
+                name: 'Touch-ups',
+                id: 19
+            },
+            {
+                name: 'Removal',
+                id: 20
+            }
+        ]
         return(
         <div className='home-page'>  
             <Header/>
@@ -100,7 +150,7 @@ class Homepage extends React.Component{
                <p className='option-question'><b>These optional questions will refine your search</b></p>  
                <div className='column-gender'>Preferred gender of tattooist: <GenderPreference/></div>   
                </Grid.Column> 
-               <p className='option-refine'>Select style (optional)</p>
+               <p className='option-refine'>Select up to four styles (optional)</p>
                <div className='optional'>  
                 {options.map((option,index) => {
                     let option_style = !this.state.selected && this.state.divId === option.id? 'optionSelected': 'option'
@@ -108,7 +158,37 @@ class Homepage extends React.Component{
                         
                         <div className={option_style} onClick={() => this.changeColor(option.id)} key={index}>{option.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
                     )
-                })}   
+                })}
+                {optionsTwo.map((optionTwo, index) =>{
+                     let optionTwo_style = !this.state.selected && this.state.divIdTwo === optionTwo.id? 'optionSelected': 'option'
+                    return(
+                    <div className={optionTwo_style} onClick={() => this.changeColorTwo(optionTwo.id)} key={index}>{optionTwo.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                    )
+                })}
+                {optionsThree.map((optionThree,index) => {
+                    let optionThree_style = !this.state.selected && this.state.divIdThree === optionThree.id? 'optionSelected': 'option'
+                    return(
+                        
+                        <div className={optionThree_style} onClick={() => this.changeColorThree(optionThree.id)} key={index}>{optionThree.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                    )
+                })} 
+                {optionsFour.map((optionFour,index) => {
+                    let optionFour_style = !this.state.selected && this.state.divIdFour === optionFour.id? 'optionSelected': 'option'
+                    return(
+                        
+                        <div className={optionFour_style} onClick={() => this.changeColorFour(optionFour.id)} key={index}>{optionFour.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                    )
+                })} 
+               </div>
+               <p className='option-refine'>Tattooist Specialties (optional)</p>
+               <div className='optional'>
+               {moreOptions.map((moreOption,index) => {
+                    let moreOptions_style = !this.state.selected && this.state.divIdFour === moreOptions.id? 'optionSelected': 'option'
+                    return(
+                        
+                        <div className={moreOptions_style} onClick={() => this.changeColorMore(moreOptions.id)} key={index}>{moreOption.name}<img className='info-pic' src={infoPic} alt='info-pic'/></div>
+                    )
+                })} 
                </div>
                <NavLink to='/artists'><button className='browse-button' type='submit'>Browse results<img src={magnifyPic} className='magnify' alt='magnify'/></button></NavLink>
         </div>
