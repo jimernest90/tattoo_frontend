@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/artists.css'
 import Axios from 'axios'
 import { Redirect, NavLink } from 'react-router-dom'
-import MapArtists from './MapArtists'
 import { Header, Grid, Dropdown } from 'semantic-ui-react'
 import HeaderArtists from '../shared/Header'
 import instagramPic from '../img/instagramPic.png'
@@ -29,16 +28,16 @@ const imageFunction = () => {
 
 let apiUrl = "https://tattoo-backend.herokuapp.com";
 
-// const apiUrls = {
-//     production: "https://tattoo-backend.herokuapp.com",
-//     development: "http://localhost:3000"
-// };
+const apiUrls = {
+    production: "https://tattoo-backend.herokuapp.com",
+    development: "http://localhost:3000"
+};
 
-// if (window.location.hostname === "localhost") {
-//     apiUrl = apiUrls.development;
-// } else {
-//     apiUrl = apiUrls.production;
-// }
+if (window.location.hostname === "localhost") {
+    apiUrl = apiUrls.development;
+} else {
+    apiUrl = apiUrls.production;
+}
 
 const Api = Axios.create({
     baseURL: apiUrl,
@@ -164,9 +163,6 @@ class Artists extends React.Component {
                 content: <div onClick={() => this.sortArtistsbyRating()}> rating </div>,
             },
         ]
-        if(!MapArtists){
-            window.location.reload(false);
-        } else{
         return (
             <Grid className='artists-page' padded='horizontally'>
                 <Grid.Row >
@@ -189,12 +185,11 @@ class Artists extends React.Component {
                         <div className='column-desktop' style={{ overflow: 'scroll', overflowX: 'hidden', maxHeight: 570 }}>{this.renderArtists()}</div>
                         <div className='column-mobile'>{this.renderArtists()}</div>
                     </div>
-                    <div className='column-map'><MapArtists /></div>
+                    <div className='column-map' style={{paddingLeft:'2em'}}><iframe style={{border:'0', borderRadius:'5px'}}src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.027020992727!2d-73.99254478484958!3d40.739430943874275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b7e53307%3A0x757eb8add2919c67!2s13-1%20E%2020th%20St%2C%20New%20York%2C%20NY%2010003!5e0!3m2!1sen!2sus!4v1587672689454!5m2!1sen!2sus" width="600" height="550"></iframe></div>
                     
                 </Grid.Row>
             </Grid>
         )
-        }
     }
 }
 

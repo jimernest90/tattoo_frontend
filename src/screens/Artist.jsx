@@ -2,7 +2,6 @@ import React from 'react'
 import Axios from 'axios'
 import '../styles/artist.css'
 import { Grid, Image } from 'semantic-ui-react'
-import MapArtist from './MapArtist'
 import { NavLink } from 'react-router-dom'
 import Header from '../shared/Header'
 import profilePic from '../img/profile.png'
@@ -121,7 +120,7 @@ class Artist extends React.Component {
                 </div>
                 </Grid.Column>
                 <Grid>
-                  <div className='map'><MapArtist/></div>
+                <div className='map' style={{paddingLeft:'4em'}}><iframe style={{border:'0', borderRadius:'5px'}}src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.027020992727!2d-73.99254478484958!3d40.739430943874275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b7e53307%3A0x757eb8add2919c67!2s13-1%20E%2020th%20St%2C%20New%20York%2C%20NY%2010003!5e0!3m2!1sen!2sus!4v1587672689454!5m2!1sen!2sus" width="1240" height="350"></iframe></div>
                   <div className='bottom-artist'>
                   <NavLink to='/artists'><h4 className='back-bottom'>&#8249; Back to results</h4></NavLink>
                   <NavLink to='/contact_form'><h4 className='reach-out-bottom'>Reach out</h4></NavLink>
