@@ -27,18 +27,18 @@ const imageFunction = () => {
 
 }
 
-let apiUrl;
+let apiUrl = "https://tattoo-backend.herokuapp.com";
 
-const apiUrls = {
-    production: "https://tattoo-backend.herokuapp.com",
-    development: "http://localhost:3000"
-};
+// const apiUrls = {
+//     production: "https://tattoo-backend.herokuapp.com",
+//     development: "http://localhost:3000"
+// };
 
-if (window.location.hostname === "localhost") {
-    apiUrl = apiUrls.development;
-} else {
-    apiUrl = apiUrls.production;
-}
+// if (window.location.hostname === "localhost") {
+//     apiUrl = apiUrls.development;
+// } else {
+//     apiUrl = apiUrls.production;
+// }
 
 const Api = Axios.create({
     baseURL: apiUrl,
@@ -51,7 +51,8 @@ class Artists extends React.Component {
         super(props)
         this.state = {
             artists: [],
-            clicked: false
+            clicked: false,
+            reset: false
         }
     }
     componentDidMount() {
@@ -113,9 +114,9 @@ class Artists extends React.Component {
     renderArtists(props) {
         let artists = this.state.clicked && <Redirect to={`/artists/${this.state.redirectID}`} />
         return (
-            this.state.artists.map((artist, index) => {
+            this.state.artists.map((artist) => {
                 return (
-                    <Grid key={index}>
+                    <Grid >
                         <Grid.Column width={15} >
                             <div className='artist-container'>
                                 <div className='column-name'>{artist.name}</div>
@@ -146,6 +147,7 @@ class Artists extends React.Component {
                 )
             })
         )
+    
     }
     render(props) {
         const options = [
@@ -162,6 +164,9 @@ class Artists extends React.Component {
                 content: <div onClick={() => this.sortArtistsbyRating()}> rating </div>,
             },
         ]
+        if(!MapArtists){
+            window.location.reload(false);
+        } else{
         return (
             <Grid className='artists-page' padded='horizontally'>
                 <Grid.Row >
@@ -185,10 +190,11 @@ class Artists extends React.Component {
                         <div className='column-mobile'>{this.renderArtists()}</div>
                     </div>
                     <div className='column-map'><MapArtists /></div>
+                    
                 </Grid.Row>
             </Grid>
         )
-
+        }
     }
 }
 
