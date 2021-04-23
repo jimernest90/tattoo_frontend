@@ -15,9 +15,9 @@ const apiUrls = {
 };
 
 if (window.location.hostname === "localhost") {
-    apiUrl = apiUrls.development;
+  apiUrl = apiUrls.development;
 } else {
-    apiUrl = apiUrls.production;
+  apiUrl = apiUrls.production;
 }
 
 const Api = Axios.create({
